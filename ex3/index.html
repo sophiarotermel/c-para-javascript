@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Loja de Camisetas</title>
+</head>
+<body>
+  <h2>Loja de Camisetas</h2>
+  <div>
+    <label for="peq">Quantidade de Camisetas Pequenas ($10,00):</label>
+    <input type="number" id="peq">
+    <br>
+    <label for="med">Quantidade de Camisetas Médias ($12,00):</label>
+    <input type="number" id="med">
+    <br>
+    <label for="grand">Quantidade de Camisetas Grandes ($15,00):</label>
+    <input type="number" id="grand">
+    <br>
+    <label for="name">Seu Nome:</label>
+    <input type="text" id="name">
+    <br>
+    <button id="calcular">Calcular</button>
+    <br>
+    <p id="resultado"></p>
+  </div>
+  
+  <script>
+    document.getElementById("calcular").addEventListener("click", function() {
+      var peq = parseInt(document.getElementById("peq").value);
+      var med = parseInt(document.getElementById("med").value);
+      var grand = parseInt(document.getElementById("grand").value);
+      var name = document.getElementById("name").value;
+      var respp = peq * 10;
+      var respm = med * 12;
+      var respg = grand * 15;
+      var total = respp + respm + respg;
+      document.getElementById("resultado").textContent = "Valor arrecadado é de: R$ " + total + ",00 " + name + ".";
+    });
+  </script>
+</body>
+</html>

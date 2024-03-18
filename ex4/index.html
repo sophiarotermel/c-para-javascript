@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">]
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Quadrados</title>
+</head>
+<body>
+  <h2>Calculadora de Quadrados</h2>
+  <div class="tudo">
+
+    <label for="numero">Informe um número:</label>
+    <input type="number" id="numero">
+    <br>
+    <button id="calcular">Calcular</button>
+    <br>
+    <p class="resultado" id="resultado"></p>
+  </div>
+  
+  <script>
+    document.getElementById("calcular").addEventListener("click", function() {
+      var num = parseInt(document.getElementById("numero").value);
+      var res = quad(num);
+      document.getElementById("resultado").textContent = "O quadrado de " + num + " é: " + res + ".";
+    });
+    
+    function quad(x) {
+      return x * x;
+    }
+  </script>
+</body>
+</html>

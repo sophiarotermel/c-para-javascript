@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Multiplicação</title>
+</head>
+<body>
+  <h2>Calculadora de Multiplicação</h2>
+  <div class="tudo">
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button id="calcular">Calcular</button>
+    <br>
+    <p id="resultado"></p>
+  </div>
+  
+  <script>
+    document.getElementById("calcular").addEventListener("click", function() {
+      var res = multi();
+      document.getElementById("resultado").textContent = "O resultado é " + res + ".";
+    });
+    
+    function multi() {
+        let n1 = parseFloat(document.getElementById("n1").value);
+        let n2 = parseFloat(document.getElementById("n2").value);
+        let res = n1 * n2;
+        return res;
+    }
+  </script>
+</body>
+</html>
